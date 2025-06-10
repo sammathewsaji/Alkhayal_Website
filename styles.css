@@ -1,0 +1,270 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #002c3e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f9a826;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.hero {
+  background-color: #002c3e;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-gallery {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #002c3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-gallery img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* Optional: Add a max-width if you want to restrict image size on large screens
+@media (min-width: 1024px) {
+  .hero-gallery img {
+    max-height: 100vh;
+  }
+} */
+
+
+.hero-content {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-gallery {
+    height: 200px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 20px 15px;
+  }
+}
+
+
+
+
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #002c3e;
+  margin-bottom: 20px;
+}
+
+.section p,
+.section li {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: #555;
+}
+
+/* Business Line */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  color: #f9a826;
+  margin-bottom: 10px;
+}
+
+/* Services List */
+#services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#services li {
+  background-color: #002c3e;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 6px;
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #f9a826;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e08f00;
+}
+
+/* Footer */
+footer {
+  background-color: #002c3e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #002c3e;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
